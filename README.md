@@ -145,7 +145,7 @@ Static-Website-CICD-Windows-Server/
 | `style.css` | Website styling |
 | `Jenkinsfile` | Jenkins CI/CD pipeline |
 | `.gitignore` | Files excluded from Git |
-| `README.md` | Project documentation |
+| `README.md` | Project README |
 | `LICENSE` | MIT license |
 
 ## 🔗 Repository
@@ -433,92 +433,6 @@ Refresh the browser and verify the change.
 
 ---
 
-# 🛠️ Troubleshooting
-
-### Website Does Not Open
-
-Check:
-
--   IIS site is started
--   Port `8082` is configured
--   Physical path is correct
--   `index.html` exists
-
-``` text
-http://localhost:8082
-```
-
-### IIS Returns 404
-
-Verify:
-
-``` text
-C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server\index.html
-```
-
-Also verify that `Static-Website-Portfolio` points to the correct
-physical path.
-
-### CSS Is Not Loading
-
-Verify that `style.css` exists in the IIS deployment directory and that
-`index.html` references it correctly:
-
-``` html
-<link rel="stylesheet" href="style.css">
-```
-
-### Jenkins Succeeds but Website Is Old
-
-Check:
-
-``` text
-GitHub
-   ↓
-Jenkins Workspace
-   ↓
-xcopy Source
-   ↓
-IIS Deployment Directory
-   ↓
-IIS
-```
-
-Confirm the source and destination paths in the Jenkinsfile.
-
-### xcopy Source Path Not Found
-
-The current Jenkinsfile uses:
-
-``` text
-C:\ProgramData\Jenkins\.jenkins\workspace\Static-Website-Windows-Server\
-```
-
-The path must match the actual Jenkins workspace.
-
-### Jenkins Cannot Write to IIS Directory
-
-Check the Windows account running the Jenkins service and grant it the
-required permissions for:
-
-``` text
-C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server
-```
-
-### Git Fetch/Reset Fails
-
-Verify:
-
-``` powershell
-git --version
-git remote -v
-git branch
-```
-
-Also confirm the repository URL and `main` branch.
-
----
-
 # 📊 Static Website vs Node.js Deployment
 
 | Capability | Node.js Project | Static Website |
@@ -607,7 +521,7 @@ http://localhost:8080
 -   [x] GitHub repository
 -   [x] `main` branch
 -   [x] MIT License
--   [x] README documentation
+-   [x] README
 -   [x] IIS installed
 -   [x] Dedicated IIS website
 -   [x] Dedicated IIS application pool
@@ -656,21 +570,3 @@ Live Website
 ```
 
 ---
-
-## 👨‍💻 Project Information
-
-**Project:** Static Website Deployed on Windows Server Through CI/CD\
-**Environment:** Windows + IIS + Jenkins CI/CD\
-**Application:** Static HTML + CSS\
-**IIS Site:** `Static-Website-Portfolio`\
-**Port:** `8082`\
-**Branch:** `main`\
-**License:** MIT\
-**Documentation Version:** 1.0\
-**Date:** 15 September 2026
-
----
-
-<p align="center">
-<strong>GitHub • Jenkins • IIS • Windows Server</strong>
-</p>
