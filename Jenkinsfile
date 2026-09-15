@@ -40,7 +40,7 @@ steps{
 
                 echo Deploying Static Website...
 
-                xcopy /E /I /Y %WORKSPACE% C:\\inetpub\\wwwroot\\Static-Website-CICD-Windows-Server\\
+                xcopy /E /I /Y "%WORKSPACE%\*" "C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server\"
 
                 echo Deployment Completed
 
