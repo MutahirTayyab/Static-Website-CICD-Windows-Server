@@ -22,7 +22,7 @@ steps{
         ) else (
 
             echo First time checkout
-            git clone https://github.com/MutahirTayyab/Mutahir_Static_Portfolio.git .
+            git clone https://github.com/MutahirTayyab/Static-Website-CICD-Windows-Server.git
 
         )
 
@@ -42,7 +42,7 @@ steps{
 
                 echo Deploying Static Website...
 
-                xcopy /E /I /Y "%WORKSPACE%\\*" "C:\\inetpub\\wwwroot\\Mutahir_Static_Portfolio\\"
+                xcopy /E /I /Y C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Static-Website-Windows-Server\\* C:\\inetpub\\wwwroot\\Static-Website-CICD-Windows-Server\\
 
                 echo Deployment Completed
 
