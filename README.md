@@ -316,8 +316,6 @@ pipeline {
                 ) else (
 
                     echo First time checkout
-                    git clone https://github.com/MutahirTayyab/Static-Website-CICD-Windows-Server.git
-
                 )
 
                 """
