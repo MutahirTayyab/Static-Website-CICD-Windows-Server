@@ -1,42 +1,43 @@
 pipeline {
 
-agent any
+    agent any
 
-options {
-    skipDefaultCheckout(true)
-}
-stages {
+    options {
+        skipDefaultCheckout(true)
+    }
+
+    stages {
+
+        stage('Checkout and Update Code') {
+
+            steps {
+
+                bat '''
+
+                if exist .git (
+
+                    echo Repository exists
+                    git fetch origin main
+                    git reset --hard origin/main
+
+                ) else (
+
+                    echo First time checkout
+
+                )
+
+                '''
+
+            }
+
+        }
 
 
-stage('Checkout and Update Code'){
-steps{
+        stage('Deploy Website Files') {
 
-        bat """
+            steps {
 
-        if exist .git (
-
-            echo Repository exists
-            git fetch origin main
-            git reset --hard origin/main
-
-        ) else (
-
-            echo First time checkout
-        )
-
-        """
-
-}
-
-}
-
-
-
-stage('Deploy Website Files'){
-
-steps{
-
-                bat """
+                bat '''
 
                 echo Deploying Static Website...
 
@@ -44,15 +45,12 @@ steps{
 
                 echo Deployment Completed
 
-                """
+                '''
 
+            }
 
-}
+        }
 
-}
-
-
-}
-
+    }
 
 }
