@@ -1,34 +1,21 @@
 # Static Website CI/CD --- Windows Server
 
-```{=html}
 <p align="center">
-```
-`<strong>`{=html}Automated Static HTML & CSS Deployment with GitHub,
-Jenkins & IIS`</strong>`{=html}
-```{=html}
+<strong>Automated Static HTML & CSS Deployment with GitHub, Jenkins & IIS</strong>
 </p>
-```
-```{=html}
 <p align="center">
-```
 A practical CI/CD implementation for deploying a static website to
 Microsoft IIS on Windows Server.
-```{=html}
 </p>
-```
-```{=html}
 <p align="center">
-```
-`<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">`{=html}
-`<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">`{=html}
-`<img src="https://img.shields.io/badge/Git-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">`{=html}
-`<img src="https://img.shields.io/badge/Jenkins-CI%2FCD-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins">`{=html}
-`<img src="https://img.shields.io/badge/IIS-Windows%20Server-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="IIS">`{=html}
-```{=html}
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+<img src="https://img.shields.io/badge/Git-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+<img src="https://img.shields.io/badge/Jenkins-CI%2FCD-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins">
+<img src="https://img.shields.io/badge/IIS-Windows%20Server-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="IIS">
 </p>
-```
 
-------------------------------------------------------------------------
+---
 
 ## 📌 Project Overview
 
@@ -40,18 +27,18 @@ The source code is maintained in GitHub. Jenkins retrieves the latest
 state of the `main` branch and copies the website files into the IIS
 deployment directory. IIS then serves the static files directly.
 
-  Property           Configuration
-  ------------------ ---------------------------------------------------------
-  Project            Static Website Deployed on Windows Server Through CI/CD
-  Application        Static HTML + CSS
-  Source Control     Git + GitHub
-  CI/CD              Jenkins
-  Web Server         Microsoft IIS
-  IIS Site           `Static-Website-Portfolio`
-  Application Pool   `Static-Website-Portfolio`
-  HTTP Port          `8082`
-  Branch             `main`
-  License            MIT
+| Property | Configuration |
+|---|---|
+| Project | Static Website Deployed on Windows Server Through CI/CD |
+| Application | Static HTML + CSS |
+| Source Control | Git + GitHub |
+| CI/CD | Jenkins |
+| Web Server | Microsoft IIS |
+| IIS Site | `Static-Website-Portfolio` |
+| Application Pool | `Static-Website-Portfolio` |
+| HTTP Port | `8082` |
+| Branch | `main` |
+| License | MIT |
 
 ## ✨ Key Features
 
@@ -71,7 +58,7 @@ deployment directory. IIS then serves the static files directly.
 -   No PM2
 -   No reverse proxy required
 
-------------------------------------------------------------------------
+---
 
 ## 🏗️ Architecture
 
@@ -124,22 +111,20 @@ Unlike the Node.js deployment, IIS does **not** forward requests to
 another application process. The HTML/CSS files themselves are the
 deployed application.
 
-------------------------------------------------------------------------
+---
 
 ## 🧰 Technology Stack
 
-  Technology         Purpose
-  ------------------ -------------------------------
-  HTML5              Website structure/content
-  CSS3               Presentation and layout
-  Git                Version control
-  GitHub             Source repository
-  Jenkins            CI/CD automation
-  Microsoft IIS      Static web server
-  Windows Server     Hosting environment
-  CMD / PowerShell   Administration and deployment
-
-------------------------------------------------------------------------
+| Technology | Purpose |
+|---|---|
+| HTML5 | Website structure/content |
+| CSS3 | Presentation and layout |
+| Git | Version control |
+| GitHub | Source repository |
+| Jenkins | CI/CD automation |
+| Microsoft IIS | Static web server |
+| Windows Server | Hosting environment |
+| CMD / PowerShell | Administration and deployment |
 
 ## 📁 Project Structure
 
@@ -154,16 +139,14 @@ Static-Website-CICD-Windows-Server/
 └── README.md
 ```
 
-  File            Purpose
-  --------------- -------------------------
-  `index.html`    Main HTML document
-  `style.css`     Website styling
-  `Jenkinsfile`   Jenkins CI/CD pipeline
-  `.gitignore`    Files excluded from Git
-  `README.md`     Project documentation
-  `LICENSE`       MIT license
-
-------------------------------------------------------------------------
+| File | Purpose |
+|---|---|
+| `index.html` | Main HTML document |
+| `style.css` | Website styling |
+| `Jenkinsfile` | Jenkins CI/CD pipeline |
+| `.gitignore` | Files excluded from Git |
+| `README.md` | Project documentation |
+| `LICENSE` | MIT license |
 
 ## 🔗 Repository
 
@@ -172,7 +155,7 @@ Static-Website-CICD-Windows-Server/
 
 The deployment source is the `main` branch.
 
-------------------------------------------------------------------------
+---
 
 # 🚀 Local Development
 
@@ -209,7 +192,7 @@ Verify:
 -   Required files are present
 -   No Node.js backend is required
 
-------------------------------------------------------------------------
+---
 
 # 🌿 Git & GitHub
 
@@ -225,7 +208,7 @@ git remote -v
 git push -u origin main
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🖥️ IIS Configuration
 
@@ -237,21 +220,14 @@ C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server
 
 ## Website Configuration
 
-  ---------------------------------------------------------------------------------------------
-  Setting                             Value
-  ----------------------------------- ---------------------------------------------------------
-  Site Name                           `Static-Website-Portfolio`
-
-  Physical Path                       `C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server`
-
-  Type                                HTTP
-
-  IP Address                          All Unassigned
-
-  Port                                `8082`
-
-  Host Name                           None
-  ---------------------------------------------------------------------------------------------
+| Setting | Value |
+|---|---|
+| Site Name | `Static-Website-Portfolio` |
+| Physical Path | `C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server` |
+| Type | HTTP |
+| IP Address | All Unassigned |
+| Port | `8082` |
+| Host Name | None |
 
 Access the website:
 
@@ -259,16 +235,16 @@ Access the website:
 http://localhost:8082
 ```
 
-------------------------------------------------------------------------
+---
 
 # ⚙️ IIS Application Pool
 
-  Setting             Value
-  ------------------- ----------------------------
-  Application Pool    `Static-Website-Portfolio`
-  .NET CLR Version    `No Managed Code`
-  Managed Pipeline    `Integrated`
-  Start Immediately   Enabled
+| Setting | Value |
+|---|---|
+| Application Pool | `Static-Website-Portfolio` |
+| .NET CLR Version | `No Managed Code` |
+| Managed Pipeline | `Integrated` |
+| Start Immediately | Enabled |
 
 ### Why No Managed Code?
 
@@ -288,7 +264,7 @@ IIS :8082
 Browser
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🔄 Jenkins CI/CD
 
@@ -310,7 +286,7 @@ require compilation.
 There is also **no restart stage** because there is no Node.js/PM2
 process.
 
-------------------------------------------------------------------------
+---
 
 # 🧩 Jenkinsfile
 
@@ -387,7 +363,7 @@ For a first-time workspace:
 git clone https://github.com/MutahirTayyab/Static-Website-CICD-Windows-Server.git
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 📦 Stage 2 --- Deploy Website Files
 
@@ -395,11 +371,11 @@ git clone https://github.com/MutahirTayyab/Static-Website-CICD-Windows-Server.gi
 xcopy /E /I /Y SOURCE DESTINATION
 ```
 
-  Option   Meaning
-  -------- ----------------------------------------------------
-  `/E`     Copies subdirectories, including empty directories
-  `/I`     Assumes destination is a directory
-  `/Y`     Suppresses overwrite confirmation
+| Option | Meaning |
+|---|---|
+| `/E` | Copies subdirectories, including empty directories |
+| `/I` | Assumes destination is a directory |
+| `/Y` | Suppresses overwrite confirmation |
 
 Destination:
 
@@ -407,7 +383,7 @@ Destination:
 C:\inetpub\wwwroot\Static-Website-CICD-Windows-Server
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🧪 End-to-End CI/CD Test
 
@@ -455,7 +431,7 @@ http://localhost:8082
 
 Refresh the browser and verify the change.
 
-------------------------------------------------------------------------
+---
 
 # 🛠️ Troubleshooting
 
@@ -541,40 +517,29 @@ git branch
 
 Also confirm the repository URL and `main` branch.
 
-------------------------------------------------------------------------
+---
 
 # 📊 Static Website vs Node.js Deployment
 
-  -----------------------------------------------------------------------
-  Capability              Node.js Project         Static Website
-  ----------------------- ----------------------- -----------------------
-  Runtime                 Node.js + Express       None
+| Capability | Node.js Project | Static Website |
+|---|---|---|
+| Runtime | Node.js + Express | None |
+| Frontend | HTML/CSS/JS | HTML/CSS |
+| Dependencies | npm | None |
+| Build | Application-dependent | Not required |
+| Process Manager | PM2 | Not required |
+| Reverse Proxy | IIS + URL Rewrite/ARR | Not required |
+| Deployment | Copy + PM2 restart | Copy files |
+| IIS Role | Reverse proxy / web server | Direct static web server |
+| Pipeline | Checkout → install → deploy → restart | Checkout/update → deploy |
 
-  Frontend                HTML/CSS/JS             HTML/CSS
-
-  Dependencies            npm                     None
-
-  Build                   Application-dependent   Not required
-
-  Process Manager         PM2                     Not required
-
-  Reverse Proxy           IIS + URL Rewrite/ARR   Not required
-
-  Deployment              Copy + PM2 restart      Copy files
-
-  IIS Role                Reverse proxy / web     Direct static web
-                          server                  server
-
-  Pipeline                Checkout → install →    Checkout/update →
-                          deploy → restart        deploy
-  -----------------------------------------------------------------------
 
 The static project preserves the same core DevOps principles while using
 a simpler deployment model:
 
 **Source Control → CI/CD Automation → Deployment → IIS Hosting**
 
-------------------------------------------------------------------------
+---
 
 # 🔐 Security Practices
 
@@ -586,7 +551,7 @@ a simpler deployment model:
 -   Keep production/server-specific configuration outside source control
     where appropriate.
 
-------------------------------------------------------------------------
+---
 
 # 📋 Useful Commands
 
@@ -633,7 +598,7 @@ http://localhost:8082
 http://localhost:8080
 ```
 
-------------------------------------------------------------------------
+---
 
 # ✅ Completion Checklist
 
@@ -655,7 +620,7 @@ http://localhost:8080
 -   [x] Automated `xcopy` deployment
 -   [x] End-to-end CI/CD testing
 
-------------------------------------------------------------------------
+---
 
 # 🎯 Final Workflow
 
@@ -690,7 +655,7 @@ Static-Website-Portfolio
 Live Website
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 👨‍💻 Project Information
 
@@ -704,13 +669,8 @@ Live Website
 **Documentation Version:** 1.0\
 **Date:** 15 September 2026
 
-------------------------------------------------------------------------
+---
 
-```{=html}
 <p align="center">
-```
-`<strong>`{=html}GitHub • Jenkins • IIS • Windows
-Server`</strong>`{=html}
-```{=html}
+<strong>GitHub • Jenkins • IIS • Windows Server</strong>
 </p>
-```
